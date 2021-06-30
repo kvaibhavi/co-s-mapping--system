@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<html>
+<head>
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="mystyles/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+</head>
+
+<body class="body" style="	background:url(mystyles/wp2581365.jpg);
+background-size:cover; background-repeat: no-repeat;">
+<div class="login-page">
+  <div class="form">
+<h1><center>Login!</center></h1>
+
+    <form id="frm" method="POST">
+      <select name="un" id="una" placeholder="&#xf007; Username">
+        <option value="admin">Admin</option>
+        <option value="prashantk">Prashant K</option>
+        <option value="dharani">Andhe Dharani</option>
+        <option value="Vijayalaxmi">Vijayalaxmi</option>
+        <option value="Mohan Aradhya">Mohan Aradhya</option>
+        <option value="Manjunath">Manjunath</option>
+        <option value="Vishal">Vishal</option>
+        <option value="Nagamuttu">Nagamuttu</option>
+        <option value="JasminKS">Jasmin K S</option>
+        <option value="RSavita">Dr Savita</option>
+        <option value="SSavita S">Savita S</option>
+        <option value="JSR">JSR</option>
+        <option value="Deepika">Deepika</option>
+        <option value="BRP">BRP</option>
+        <option value="Chandrashekhar">Chandrashekhar</option>
+        <option value="usha">Usha</option>
+        <option value="AshwiniKB">AshwiniKB</option>
+      </select>
+      <input type="password" placeholder="&#xf023;  password" name="pwd" required/>
+      <button onclick="fxn()">LOGIN</button>
+      
+      <p class="message"></p>
+    </form>
+    <button onclick="fxnOut()">LOGOUT</button>
+    <script>
+      function fxn()
+      {
+        var uname=document.getElementById("una").value;
+        document.getElementById("frm").action="login_post?uname="+uname;
+        
+      }
+      function fxnOut()
+      {
+                
+      }
+    </script>
+  </div>
+</div>
+
+</body>
+</html>
+

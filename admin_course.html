@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<html>
+<head>
+  <title>course</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="mystyles/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+</head>
+
+<body class="body" style="	background:url(mystyles/wp2581365.jpg);
+background-size:cover; background-repeat: no-repeat;">
+<div class="login-page">
+  <div class="form">
+<h1><center>Admin!</center></h1>
+
+    <form action="admin_course_post" method="POST">
+        <input type="text" name="usn" placeholder="enter usn" required>
+        <input type="text" name="name1" placeholder="enter name" required>
+      <select name="core1">
+        <option value="18mca41">MAD</option>
+      </select>
+
+
+      <select name="core2">
+            <option value="18mca42">STP</option>
+        </select>
+
+
+      <select name="elective1">
+            <option value="18mca431">IR</option>
+            <option value="18mca432">PR</option>
+            <option value="18mca433">SA</option>
+          </select>
+
+    <select name="elective2">
+        <option value="18mca441">CS</option>
+        <option value="18mca442">SC</option>
+        <option value="18mca443">UML</option>
+    </select>
+
+    <select name="elective3">
+            <option value="18mca451">CG</option>
+            <option value="18mca452">ACN</option>
+            <option value="18mca453">EAP</option>
+        </select>
+        <select name="minipro">
+                <option value="18mca46">mini project</option>
+                
+            </select>
+      <button>submit</button>
+      <a href="/#back"><input type="button" value="back"/></a>
+      <p class="message"></p>
+    </form>
+
+
+  </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+{
+  "name": "4thsemproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "ejs": "^3.0.1",
+    "excel4node": "^1.7.2",
+    "exceljs": "^3.9.0",
+    "express": "latest",
+    "flat": "^5.0.0",
+    "fs": "0.0.1-security",
+    "got": "^10.7.0",
+    "jsdom": "^16.2.2",
+    "mongo-xlsx": "^1.0.12",
+    "mongodb": "^2.2.36",
+    "mongoose": "latest"
+  }
+}

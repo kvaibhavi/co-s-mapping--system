@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+<html>
+<head>
+  <title>Faculty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="mystyles/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>  
+</head>
+
+<body class="body" style="	background:url(mystyles/wp2581365.jpg);
+background-size:cover; background-repeat: no-repeat;" onload="fxn()">
+<center><h2 style="color: white" id="msg"></h2></center>
+<div class="login-page">
+  <div class="form">
+<h1><center>Faculty!</center></h1>
+
+    <form id="frm" method="POST">
+
+
+      <select name="course" id="courses">
+      </select>
+      <select name="test" id="tests">
+        <option value="Test1">Test1</option>
+        <option value="Test2">Test2</option>
+        <option value="Test3">Test3</option>
+      </select>
+      <input type="text" name="qno" required>
+      <input type="number" name="maxMarks" required>
+      <select name="cos">
+        <option value="CO1">CO1</option>
+        <option value="CO2">CO2</option>
+        <option value="CO3">CO3</option>
+        <option value="CO4">CO4</option>
+      </select>
+
+      <p id="demo"></p>
+      <button onclick="f()">submit</button>
+      
+      <p class="message"></p>
+    </form>
+    <form id="frm1" method="POST">
+      <button onclick="g()">Generate</button>
+    </form>
+  </div>
+</div>
+<script>
+
+
+var mad=['MAD','18mca41']
+    var stp=['STP','18mca42']
+    var ir=['IR','18mca431']
+    var pr=['PR','18mca432']
+    var sa=['SA','18mca433'];
+    var cs=['CS','18mca441'];
+    var sc=['SC','18mca442'];
+    var uml=['UML','18mca443'];
+    var eap=['EAP','18mca453'];
+    var acn=['ACN','18mca452'];
+    var cg=['CG','18mca451'];
+    var alls=['MAD','STP','IR','PR','SA','CS','SC','UML','EAP','ACN','CG']
+    var allcno=['18mca41','18mca42','18mca431','18mca432','18mca433','18mca441','18mca442','18mca443','18mca451','18mca452','18mca453']
+    var urlval=window.location.search;
+    
+  const urlParams = new URLSearchParams(urlval);
+  var course=document.getElementById("courses");
+  const msq = urlParams.get('uname')
+    var i;
+    var message=document.getElementById("msg");
+    message.innerHTML="Welcome "+msq;
+    var flag;
+   // var year=document.getElementById("year").value;
+
+   function f()
+      {
+       // var uname=document.getElementById("una").value;
+        document.getElementById("frm").action="faculty_question_post?uname="+msq;
+        
+      }
+      function g()
+      {
+        document.getElementById("frm1").action="generate_post?uname="+msq;
+      }
+
+    if(msq=="prashantk")
+    {
+
+        flag=eap;
+    }
+    else if(msq=="Mohan Aradhya")
+      flag=acn;
+    else if(msq=="Chandrashekhar")
+      flag=ir;
+    else if(msq=="SSavita")
+      flag=pr;
+    else if((msq=="JSR") || (msq=="Nagamuttu"))
+      flag=cs;
+    else if((msq=="BRP") || (msq=="Deepika"))
+      flag=mad;
+    else if((msq=="JasminKS") || (msq=="AshwiniKB"))
+      flag=stp;
+    else
+    {
+      for(i=0;i<(alls.length);i++)
+      {
+        var couval = new Option(alls[i], allcno[i]);
+       course.options.add(couval);
+      }
+    }
+  //}
+  function fxn()
+  {
+    for(i=0;i<flag.length-1;i++)
+    {
+      var couval = new Option(flag[i], flag[i+1]);
+   		course.options.add(couval);
+    }
+
+  }
+
+  function que()
+  {
+    if(flag=="eap")
+    {
+      location.replace("question.html");
+    }
+    
+  }
+</script>
+  
+</body>
+</html>
+
